@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Journal</title>
+        <link rel="stylesheet" href="/public/style.css">
+    </head>
+    <body>
+        <h1>2025</h1>
+        {% for month in pages %}
+        <div>
+            <h2>{{ month.name }}</h2>
+
+            {% for day in month.days %}
+            <div>
+            <h3>{{ day.meta['title'] }}</h3>
+                {% if day.meta['raceReport'] %}
+                    <table class="race-report">
+                        <tr>
+                            <th>distance</th>
+                            <th>time</th>
+                            <th>pace</th>
+                            <th>calories</th>
+                            <th>bpm</th>
+                        </tr>
+                        <tr>
+                            <td>{{ day.meta['raceReport']['distance'] }} km</td>
+                            <td>{{ day.meta['raceReport']['time'] }} h</td>
+                            <td>{{ day.meta['raceReport']['pace'] }} min/km</td>
+                            <td>{{ day.meta['raceReport']['calories'] }} ckal</td>
+                            <td>{{ day.meta['raceReport']['bpm'] }}</td>
+                        </tr>
+                    </table>
+                {% endif %}
+                {{ day.content|raw }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </body>
+</html>

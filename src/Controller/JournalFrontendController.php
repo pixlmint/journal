@@ -2,17 +2,18 @@
 
 namespace App\Controller;
 
+use Nacho\Controllers\AbstractController;
 use Nacho\Models\HttpResponse;
+use PixlMint\JournalPlugin\Helpers\CacheHelper;
 
-class JournalFrontendController
+class JournalFrontendController extends AbstractController
 {
-    public function index(): HttpResponse
+    public function index(CacheHelper $cacheHelper): HttpResponse
     {
-        return new HttpResponse(file_get_contents('dist/index.html'));
-    }
+        $cacheHelper->build();
+        $entries = $cacheHelper->read();
 
-    public function info(): HttpResponse
-    {
-        return new HttpResponse(phpinfo());
+        return $this->render('base.twig', ['pages' => array_values($entries->getContent())]);
     }
 }
+

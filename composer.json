@@ -6,7 +6,8 @@
         "ext-zip": "*",
         "ext-gd": "*",
         "ext-exif": "*",
-        "ext-fileinfo": "*"
+        "ext-fileinfo": "*",
+        "twig/twig": "^3.20"
     },
     "autoload": {
         "psr-4": {

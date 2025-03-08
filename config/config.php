@@ -32,7 +32,7 @@ return [
     ],
     'journal' => [
         'year' => '2025',
-        'version' => '2025.1',
+        'version' => '2025.2',
     ],
     'base' => [
         'frontendController' => JournalFrontendController::class,

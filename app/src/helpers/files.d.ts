@@ -1,1 +1,0 @@
-export function getFileExtension(filePath: string): string;
