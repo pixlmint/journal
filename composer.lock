@@ -307,12 +307,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pixlmint/nacho.git",
-                "reference": "10963d63ad9857942834884fa5e99db2671cecdd"
+                "reference": "80355d4ac9e33b0e04af096ace3e50c214b20e96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pixlmint/nacho/zipball/10963d63ad9857942834884fa5e99db2671cecdd",
-                "reference": "10963d63ad9857942834884fa5e99db2671cecdd",
+                "url": "https://api.github.com/repos/pixlmint/nacho/zipball/80355d4ac9e33b0e04af096ace3e50c214b20e96",
+                "reference": "80355d4ac9e33b0e04af096ace3e50c214b20e96",
                 "shasum": ""
             },
             "require": {
@@ -348,7 +348,7 @@
                 "issues": "https://github.com/pixlmint/nacho/issues",
                 "source": "https://github.com/pixlmint/nacho/tree/1.6.17"
             },
-            "time": "2025-08-26T19:55:19+00:00"
+            "time": "2025-08-26T20:44:01+00:00"
         },
         {
             "name": "pixlmint/parsedown",
